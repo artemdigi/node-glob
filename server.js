@@ -18,24 +18,20 @@ app.get('/', function (req, res) {
     let options = {
         'cwd': './templates'
     }
+
     glob('*.html.twig', options, function (er, files) {
-
         var html = '<html><body><h1>Шаблоны:</h1>'
-
-        // console.log(files)
-        // console.log(html)
 
         html += '<ul>'
         for (const file of files) {
-            let li = '<li>' + file + '</li>';
+            let link = file.replace('.html.twig', '');
+            let li = '<li><a href="' + link + '">' + link + '</a></li>';
             html += li
         }
         html += '</ul>'
 
         html += '</body></html>'
 
-        console.log(html)
-    
         res.send(html)
     })
 });
