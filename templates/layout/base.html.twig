@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title 'Base template' %}</title>
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/icons.min.css">
+</head>
+
+<body>
+	{% include 'layout/partials/header.html.twig' %}
+
+	{% block breadcrumbs %}
+		{% include 'layout/partials/breadcrumbs.html.twig' %}
+	{% endblock breadcrumbs %}
+
+	{% block content '' %}
+
+	{% include 'layout/partials/footer.html.twig' %}
+
+	<a href="#" onclick="return false;" class="flying-chat"><i class="icon icon-chat"></i></a>
+
+	<!--scripts-->
+	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+	<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+	<script type="text/javascript" src="js/cookie.min.js"></script>
+	<!--/scripts-->
+</body>
+</html>
